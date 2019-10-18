@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00796B">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:background="#004D40"
+        android:textColor="#E0F2F1"
+        android:text="Decode Morse" />
+
+    <EditText
+        android:id="@+id/phrase_input_decode"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:hint="Enter morse string"
+        android:textColor="#E0F2F1"
+        android:backgroundTint="@android:color/darker_gray"
+        android:scrollbars="vertical" />
+
+    <Button
+        android:id="@+id/toTextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/phrase_input_decode"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:text="Convert To Text"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:textColor="#E0F2F1"
+        android:textSize="20sp"
+        android:text="Result: "
+        android:layout_marginTop="50dp"
+        android:layout_below="@id/toTextButton"/>
+
+</RelativeLayout>

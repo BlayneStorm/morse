@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00796B">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:background="#004D40"
+        android:textColor="#E0F2F1"
+        android:text="Send SMS" />
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/relative_lay"
+        android:layout_marginTop="50dp">
+
+        <EditText
+            android:id="@+id/phone_number"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:hint="Enter phone number"
+            android:inputType="phone"
+            android:textColor="#E0F2F1"
+            android:backgroundTint="@android:color/darker_gray" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:id="@+id/add_contact"
+            android:src="@drawable/agend"
+            android:onClick="pickContact"
+            android:layout_toEndOf="@id/phone_number"
+            android:layout_marginStart="10dp"
+            android:tint="#004D40"/>
+
+    </RelativeLayout>
+    <!--<EditText-->
+        <!--android:id="@+id/phone_number"-->
+        <!--android:layout_width="300dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@id/title"-->
+        <!--android:layout_marginTop="50dp"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:hint="Enter phone number"-->
+        <!--android:inputType="phone"-->
+        <!--android:textColor="#E0F2F1"-->
+        <!--android:backgroundTint="@android:color/darker_gray" />-->
+
+    <!--<ImageView-->
+        <!--android:layout_width="50dp"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:id="@+id/add_contact"-->
+        <!--android:src="@drawable/agend"-->
+        <!--android:onClick="pickContact"/>-->
+
+    <EditText
+        android:id="@+id/message"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:inputType="textCapSentences|textMultiLine"
+        android:maxLength="500"
+        android:gravity="start"
+        android:hint="Enter message"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/relative_lay"
+        android:layout_marginTop="30dp"
+        android:textColor="#E0F2F1"
+        android:backgroundTint="@android:color/darker_gray" />
+
+    <Button
+        android:id="@+id/send_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/message"
+        android:layout_marginTop="30dp"
+        android:text="Send SMS"
+        android:textStyle="italic"
+        android:onClick="sendMessage"/>
+
+    <TextView
+        android:id="@+id/message_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Message not sent yet."
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/send_message"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/colorPrimaryDark" />
+    <TextView
+        android:id="@+id/delivery_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Message not delivered yet."
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/send_message"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/colorPrimaryDark" />
+</RelativeLayout>

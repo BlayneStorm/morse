@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00796B"
+    android:focusableInTouchMode="true">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:background="#004D40"
+        android:textColor="#E0F2F1"
+        android:text="Morse Converter" />
+
+    <Button
+        android:id="@+id/enable_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/title"
+        android:layout_marginTop="20dp"
+        android:text="Enable Camera"/>
+    <Button
+        android:id="@+id/flash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/title"
+        android:layout_marginTop="400dp"
+        android:text="turn flash"
+        android:onClick="turnFlash"/>
+
+    <EditText
+        android:id="@+id/phrase_input"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/title"
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"
+        android:hint="Add a voucher code"
+        android:textColor="#E0F2F1"
+        android:backgroundTint="@android:color/darker_gray"
+        android:scrollbars="vertical" />
+
+    <ToggleButton
+        android:id="@+id/onOffFlashlight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/phrase_input"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textOn="Turn Off"
+        android:textOff="Turn On"
+        android:checked="false"
+        android:text="Turn On/Off Camera LED/ Flashlight Android" />
+
+    <Button
+        android:id="@+id/toMorseButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/onOffFlashlight"
+        android:layout_marginLeft="20dp"
+        android:text="Convert To Morse"
+        android:onClick="textToMorse"/>
+    <Button
+        android:id="@+id/toTextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/onOffFlashlight"
+        android:layout_marginLeft="200dp"
+        android:text="Convert To Text"
+        android:onClick="morseToText"/>
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#E0F2F1"
+        android:textSize="18sp"
+        android:layout_marginTop="70dp"
+        android:layout_below="@id/onOffFlashlight"/>
+
+</RelativeLayout>
